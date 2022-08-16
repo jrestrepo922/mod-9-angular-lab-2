@@ -6,5 +6,38 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-lab-2';
+  athletes = [
+    {
+      name: "Paco",
+      sport: "soccer",
+      active: true, 
+    },
+    {
+      name: "Pepe",
+      sport: "basketall",
+      active: false, 
+    },
+    {
+      name: "Pedro",
+      sport: "baseball",
+      active: true, 
+    }
+  ]
+
+  newAthlete = {
+    name: "",
+    sport:  "",
+    active: false,  
+  }
+
+  addAthlete(){
+    let newAthlete = this.newAthlete; 
+    this.athletes.push(newAthlete); 
+    this.newAthlete =   newAthlete = {
+      name: "",
+      sport:  "",
+      active: false,  
+    }
+  }
+
 }
